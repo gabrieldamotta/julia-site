@@ -1,0 +1,93 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <meta charset="utf-8">
+
+  <title>Julia Motta</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/gwn7cyv.css">
+</head>
+<body>
+
+<!-- Navigation bar -->
+<header>
+  <h1 class="logo">Julia Motta</h1>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="watch.html">Watch</a></li>
+      <li><a href="headshots.html">Headshots</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <span class="ver-line"></span>
+      <li><a href="https://www.imdb.com/name/nm8582752/">IMDB</a></li>
+      <li><a href="https://www.instagram.com/juliaamotta/">Instagram</a></li>
+    </ul>
+    <span class="hor-line"></span>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+  <span class="hor-line"></span>
+</header>
+
+<!-- Main Section (Home) -->
+<main class="portfolio-carousel modal-holder">
+  <div class="modal-photo">
+    <img>
+    <button class="modal-close"></button>
+  </div>
+  <button class="carousel__button carousel__button--left">
+    <img src="images/ui/arrow_left.png" alt="arrow_left">
+  </button>
+  <div class="carousel__track-container">
+    <ul class="carousel__track">
+      <li class="carousel__slide current-slide">
+        <img src="images/portfolio/portfolio_13.jpg" alt="portfolio_13" class="carousel__image can-modal-photo">
+      </li>
+      <li class="carousel__slide carousel__slide--semi">
+        <img src="images/portfolio/portfolio_14.jpg" alt="portfolio_14" class="carousel__image can-modal-photo">
+      </li>
+      <li class="carousel__slide carousel__slide--long">
+        <img src="images/portfolio/portfolio_long_1.jpg" alt="portfolio_long_1" class="carousel__image--long can-modal-photo">
+      </li>
+      <li class="carousel__slide">
+        <img src="images/portfolio/portfolio_5.jpeg" alt="portfolio_5" class="carousel__image can-modal-photo">
+      </li>
+      <li class="carousel__slide carousel__slide--semi">
+        <img src="images/portfolio/portfolio_6.jpeg" alt="portfolio_6" class="carousel__image can-modal-photo">
+      </li>
+      <li class="carousel__slide">
+        <img src="images/portfolio/portfolio_7.jpg" alt="portfolio_7" class="carousel__image can-modal-photo">
+      </li>
+      <li class="carousel__slide carousel__slide--semi">
+        <img src="images/portfolio/portfolio_8.jpg" alt="portfolio_8" class="carousel__image can-modal-photo">
+      </li>
+    </ul>
+  </div>
+  <button class="carousel__button carousel__button--right">
+    <img src="images/ui/arrow_right.png" alt="arrow_right">
+  </button>
+  <div class="carousel__nav">
+    <button class="carousel__indicator current-slide"></button>
+    <button class="carousel__indicator carousel__indicator--semi"></button>
+    <button class="carousel__indicator"></button>
+    <button class="carousel__indicator"></button>
+    <button class="carousel__indicator carousel__indicator--semi"></button>
+    <button class="carousel__indicator"></button>
+    <button class=" carousel__indicator carousel__indicator--semi"></button>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>© Julia Motta - 2019</p>
+</footer>
+
+<script src="js/modal_photo.js" type="text/javascript"></script>
+<script src="js/carousel.js" type="text/javascript"></script>
+
+</body>
+</html>
