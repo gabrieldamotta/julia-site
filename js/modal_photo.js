@@ -36,13 +36,20 @@ modalContainer.addEventListener('click', e => {
     }
   })
 
-  // fetch full image path
+  // fetch image path
   const image = modal.firstElementChild;
   var oriPath = modalToggle.src;
-  var splitPath = oriPath.split("\.");
-  try {
-    image.src = splitPath[0] + "_FULL." + splitPath[1];
-  } catch { // use light image if path is bad
+  // check if full path is needed
+  if (modal.classList.contains('full-path')) {
+    var dotIndex = oriPath.lastIndexOf("\.")
+    // build and assign path
+    var fullPath = oriPath.substring(0, dotIndex) +
+                   "_FULL" +
+                   oriPath.substring(dotIndex);
+    // assign full path
+    image.src = fullPath;
+  } else {
+    // assign regular path
     image.src = oriPath;
   }
 
