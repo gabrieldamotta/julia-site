@@ -36,9 +36,15 @@ modalContainer.addEventListener('click', e => {
     }
   })
 
-  // fetch image
+  // fetch full image path
   const image = modal.firstElementChild;
-  image.src = modalToggle.src;
+  var oriPath = modalToggle.src;
+  var splitPath = oriPath.split("\.");
+  try {
+    image.src = splitPath[0] + "_FULL." + splitPath[1];
+  } catch { // use light image if path is bad
+    image.src = oriPath;
+  }
 
   // open the modal
   modalOpen();
