@@ -155,7 +155,7 @@ nav a:hover {
   position: relative;
 }
 
-@media screen and (min-width: 1475px) {
+@media screen and (min-width: 1320px) {
   .nav-toggle-label {
     display: none;
   }
@@ -196,6 +196,7 @@ nav a:hover {
   }
 
   nav a {
+    font-size: 1.4em;
     opacity: 1;
     position: relative;
   }
@@ -238,6 +239,18 @@ nav a:hover {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  nav a {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  nav a {
+    font-size: 1.8rem;
+  }
+}
+
 /* Nav bar styles END */
 
 /* Main styles START */
@@ -246,7 +259,7 @@ main {
   padding-top: 60px;
   padding-bottom: 60px;
   margin: auto;
-  width: 80%;
+  width: 85%;
 }
 
 .home-box {
@@ -398,6 +411,7 @@ main {
 
 .carousel__nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0;
 }
@@ -408,7 +422,7 @@ main {
   height: 4px;
   background: var(--grey);
   opacity: .75;
-  margin: 0 12px;
+  margin: 5px 12px;
   cursor: pointer;
 }
 
@@ -547,7 +561,7 @@ footer p {
 
 
 /* Thicker mobile footer */
-@media screen and (max-width: 1475px) {
+@media screen and (max-width: 1320px) {
  footer {
    padding: 3em;
  }
