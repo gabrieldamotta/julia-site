@@ -44,7 +44,7 @@ const updateDots = (currentDot, targetDot) => {
 }
 
 // click left, move left
-prevButton.addEventListener('click', e => {
+const moveLeft = (e) => {
   const currentSlide = track.querySelector('.current-slide');
   var prevSlide = currentSlide.previousElementSibling;
 
@@ -66,10 +66,11 @@ prevButton.addEventListener('click', e => {
   // move
   moveToSlide(track, currentSlide, prevSlide);
   updateDots(currentDot, prevDot);
-})
+}
+prevButton.addEventListener('click', moveLeft);
 
 // click right, move right
-nextButton.addEventListener('click', e => {
+const moveRight = (e) => {
   const currentSlide = track.querySelector('.current-slide');
   var nextSlide = currentSlide.nextElementSibling;
 
@@ -96,7 +97,8 @@ nextButton.addEventListener('click', e => {
   // move
   moveToSlide(track, currentSlide, nextSlide);
   updateDots(currentDot, nextDot);
-})
+}
+nextButton.addEventListener('click', moveRight);
 
 // handle navigation dots
 dotsNav.addEventListener('click', e => {
@@ -111,4 +113,26 @@ dotsNav.addEventListener('click', e => {
 
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
+})
+
+// swipe feature for mobile
+track.addEventListener('touchstart', start => {
+  const initialPos = start.touches[0].screenX;
+  var moveDir = 0;
+
+  const swipe = pos => {
+    moveDir = pos.touches[0].screenX - initialPos;
+  }
+  document.addEventListener("touchmove", swipe);
+
+  document.addEventListener("touchend", _ => {
+    document.removeEventListener('touchmove', swipe);
+    console.log(moveDir);
+    if (moveDir < -5) {
+      moveRight();
+    } else if (moveDir > 5) {
+      moveLeft();
+    }
+    moveDir = 0;
+  })
 })

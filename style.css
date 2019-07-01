@@ -440,6 +440,10 @@ main {
     width: 100%;
   }
 
+  .carousel__image {
+    object-fit: contain;
+  }
+
   .carousel__image--long {
     object-fit: contain;
   }
@@ -530,6 +534,12 @@ main {
 
 .modal-close:hover::after, .modal-close:hover::before {
   background-color: var(--green);
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-close {
+    transform: scale(2);
+  }
 }
 
 @keyframes modalIn {
