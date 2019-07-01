@@ -346,7 +346,7 @@ main {
 /* Portfolio styles */
 .portfolio-carousel {
   position: relative;
-  height: 1050px;
+  height: 1200px;
   max-height: 110vh;
   margin: 0 auto;
 }
