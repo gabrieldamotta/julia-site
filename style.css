@@ -448,6 +448,10 @@ main {
     object-fit: contain;
   }
 
+  .carousel__indicator {
+    width: 15px;
+  }
+
   .carousel__indicator--semi {
     display: initial;
   }
