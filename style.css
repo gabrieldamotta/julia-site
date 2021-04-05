@@ -467,15 +467,55 @@ main {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-top: 22%;
+  padding-bottom: 22%;
+  margin-bottom: 2%;
 }
 
 .aspect-ratio iframe {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+  max-width: 85%;
+  max-height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vid-selector {
+  margin-top: 3%;
+  display: flex;
+  /* gap: 20px; */
+  justify-content: center;
+}
+
+.vid-thumbnail {
+  position: relative;
+  max-width: 40%;
+  width: 450px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.vid-thumbnail-img {
+  max-width: 100%;
+  /* width: 450px; */
+  /* height: auto; */
+  box-shadow: 3px 3px 6px var(--grey);
+  transition: 0.3s;
+}
+
+.vid-play-img {
+  position: absolute;
+  max-width: 25%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vid-thumbnail:hover {
+  cursor: pointer;
+  opacity: .85;
 }
 
 /* Modal styles */
